@@ -87,6 +87,19 @@ h2, h3 {
 
 .nav-menu .link.current {
   color: var(--accent-color);
+  position: relative;
+}
+
+.nav-menu .link.current::after {
+  position: absolute;
+  top: 77px;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* .logo */
@@ -141,6 +154,8 @@ a.logo > span {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 500ms ease;
 }
 
 .address-item > .link:hover, .address-item > .link:focus {
@@ -305,6 +320,31 @@ a.logo > span {
   letter-spacing: 0.03em;
 }
 
+.work .work-thumb {
+  position: relative;
+}
+
+.work .img-subtitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 
 /* Team */
 .team {
@@ -365,6 +405,8 @@ a.logo > span {
   border-radius: 50%;
 
   color: var(--social-link-color);
+
+  transition: background-color 250ms linear;
 }
 
 .social-list .link:hover,
@@ -410,6 +452,8 @@ a.logo > span {
   border-radius: 4px;
 
   color: var(--social-link-color);
+
+  transition: color 250ms linear;
 }
 
 .clients-list .link:hover,
