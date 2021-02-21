@@ -45,7 +45,7 @@
       <section class="hero">
         <div class="container">          
           <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса</h1>
-          <button type="button" class="oder-button">Заказать услугу</button>
+          <button type="button" class="oder-button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -412,12 +412,15 @@
     </footer>
 
     <!-- Modal Window -->
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <svg class="close-icon" width="30" height="30">
-          <use href="./images/icons.svg#icon-close"></use>
-        </svg>
+        <button class="close-button" type="button" data-modal-close>
+          <svg class="close-icon" width="30" height="30">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

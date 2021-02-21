@@ -566,16 +566,31 @@ a.logo > span {
   padding-right: 8px;
   border-radius: 4px;
 
-  background-color: white;
+  background-color: var(--main-body-bg-color);
+  transform: scale(1);
+
+  transition: transform 500ms var(--timing-function), opacity 500ms var(--timing-function);
 }
 
-.modal > .close-icon {
+/* .backdrop.is-hidden {
+  transform: scale(0);
+} */
+
+.modal > .close-button {
   display: block;
   margin-left: auto;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* _________________ */
