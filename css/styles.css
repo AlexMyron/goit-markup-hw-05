@@ -16,21 +16,19 @@
   --duration : 250ms;
 }
 
-body {
-  color: var(--primary-color);
-  background-color: var(--main-body-bg-color);
-
+body {  
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
+
+  color: var(--primary-color);
+  background-color: var(--main-body-bg-color);
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-right: 0;
-  padding-left: 0;
 }
 
 img {
@@ -51,12 +49,12 @@ h2, h3 {
 
 /* Header */
 .container {
+  display: flex;
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  display: flex;
 }
 
 .page-header {
@@ -70,8 +68,8 @@ h2, h3 {
 }
 
 .nav > .nav-menu {
-  margin-left: 93px;
   display: flex;
+  margin-left: 93px;
 }
 
 .nav-menu > .item + .item {
@@ -89,8 +87,9 @@ h2, h3 {
 }
 
 .nav-menu .link.current {
-  color: var(--accent-color);
   position: relative;
+
+  color: var(--accent-color);
 }
 
 .nav-menu .link.current::after {
@@ -141,9 +140,9 @@ a.logo > span {
 
 /* header-address */
 .container > .header-address {
-  margin-left: auto;
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .header-address > .address-item + .address-item {
@@ -337,13 +336,11 @@ a.logo > span {
   padding-top: 27px;
   padding-bottom: 27px;
 
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
 
   color: var(--white-color);
@@ -473,26 +470,32 @@ a.logo > span {
 
 .client-icon.logo-1 {
   width: 44px;
+  height: 49px;
 }
 
 .client-icon.logo-2 {
   width: 40px;
+  height: 52px;
 }
 
 .client-icon.logo-3 {
   width: 41px;
+  height: 42px;
 }
 
 .client-icon.logo-4 {
   width: 80px;
+  height: 42px;
 }
 
 .client-icon.logo-5 {
   width: 59px;
+  height: 47px;
 }
 
 .client-icon.logo-6 {
   width: 88px;
+  height: 45px;
 }
 
 /* Footer */
@@ -676,6 +679,7 @@ a.logo > span {
 
 .work-item .thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .thumb > .overlay {
@@ -693,12 +697,12 @@ a.logo > span {
   color: var(--white-color);
   background-color: var(--accent-color-90);
   
-  opacity: 0;
-  transition: opacity var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function);
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function);
 }
 
 .work-item > .link:hover .overlay {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 /* CONTACTS */
