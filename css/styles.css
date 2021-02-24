@@ -96,7 +96,7 @@ h2, h3 {
 
 .current::after {
   position: absolute;
-  top: 77px;
+  bottom: -1px;
   left: 0;
   content: '';
   display: block;
@@ -502,10 +502,14 @@ a.logo > span {
   background-color: var(--hero-footer-bg-color);
 }
 
-.footer .footer-content {
-  display: block;
+.footer > .container {
+  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer .footer-content {
+  display: block;
   margin-bottom: 0;
 }
 
@@ -542,7 +546,6 @@ a.logo > span {
 }
 
 .footer-social {
-  padding-top: 72px;
   margin-left: 70px;
 }
 
@@ -594,9 +597,9 @@ a.logo > span {
   left: 50%;
   width: 528px;
   height: 581px;
-  padding-top: 8px;
-  padding-right: 8px;
+  padding: 40px;
   border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   
   background-color: var(--main-body-bg-color);
   
@@ -609,17 +612,18 @@ a.logo > span {
 }
 
 .close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: block;
   width: 35px;
   height: 35px;
-
   padding: 0;
   margin: 0;
-  margin-left: auto;
+  
   border: none;
   background-color: transparent;
   cursor: pointer;
-
 }
 
 .close-icon {
