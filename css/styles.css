@@ -708,7 +708,6 @@ body {
   margin-bottom: 4px;
 }
 .modal-form__label--checkbox {
-  padding-left: 24px;
   cursor: pointer;
 }
 
@@ -794,12 +793,10 @@ body {
 }
 
 .modal-form__checkbox {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-right: 8px;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
