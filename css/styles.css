@@ -13,7 +13,7 @@
   --primary-font-family: "Roboto", sans-serif;
   --transition-props: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --backdrop-bg: rgba(46, 47, 66, 0.4);
-    --checkbox-color: rgba(46, 47, 66, 0.4);
+  --checkbox-color: rgba(46, 47, 66, 0.4);
 }
 
 p,
@@ -521,20 +521,14 @@ body {
   gap: 16px;
 }
 
-.subscribe-form__inner {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 16px;
-}
-
-.subscribe-form {
+.subscribe-form__form {
   display: flex;
   gap: 24px;
   align-items: flex-end;
 }
 
-.subscribe-form__label {
-  font-size: inherit;
+.subscribe-form__slogan {
+  margin-bottom: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -542,16 +536,17 @@ body {
 }
 
 .subscribe-form__input {
-  padding: 7px 16px;
+  padding-left: 16px;
   width: 264px;
+  height: 40px;
   font-size: 12px;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-color);
   border-radius: 4px;
   border: 1px solid var(--white-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: transparent;
 }
 
@@ -563,8 +558,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  padding: 8px 24px;
+  min-width: 165px;
+    height: 40px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -582,6 +577,7 @@ body {
 }
 
 .subscribe__button-icon {
+  margin-left: 16px;
   fill: currentColor;
 }
 /* Social links section */
@@ -638,6 +634,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 72px 24px 24px 24px;
   width: 408px;
   border-radius: 4px;
   background-color: var(--modal-background-color);
@@ -680,11 +677,11 @@ body {
 }
 
 /* Modal Form */
-.modal-form {
+/* .modal-form {
   padding: 72px 24px 24px;
 }
 
-.modal-form__title {
+*/ .modal__title {
   margin-bottom: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -694,9 +691,6 @@ body {
 
 .modal-form__input-group,
 .modal-form__comment-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
   margin-bottom: 8px;
 }
 
@@ -706,12 +700,16 @@ body {
 
 .modal-form__label,
 .modal-form__label--checkbox {
+  display: block;
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
+  line-height: 1.17;
+    letter-spacing: 0.04em;
   color: var(--subtle-text-color);
 }
 
+.modal-form__label {
+  margin-bottom: 4px;
+}
 .modal-form__label--checkbox {
   padding-left: 24px;
   cursor: pointer;
@@ -719,16 +717,6 @@ body {
 
 .modal-form__input-wrapper {
   position: relative;
-}
-
-.modal-form__input {
-  padding: 7px 16px 7px 38px;
-  height: 40px;
-
-}
-
-.modal-form__comment {
-  padding: 7px 16px;
 }
 
 .modal-form__comment::placeholder {
@@ -739,13 +727,26 @@ body {
 .modal-form__comment {
   width: 100%;
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
+  line-height: 1.17;
+    letter-spacing: 0.04em;
   color: var(--dark-color);
   border-radius: 4px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid var(--checkbox-color);
   outline: none;
+  background-color: transparent;
   transition: border-color var(--transition-props);
+}
+.modal-form__input {
+  padding-left: 38px;
+  height: 40px;
+
+}
+
+.modal-form__comment {
+  padding: 8px 16px;
+  height: 120px;
+  color: var(--checkbox-color);
+  outline: transparent
 }
 
 .modal-form__input:focus,
@@ -758,8 +759,8 @@ body {
   bottom: 50%;
   left: 16px;
   transform: translateY(50%);
-  transition: fill var(--transition-props);
   pointer-events: none;
+  transition: fill var(--transition-props);
 }
 
 .modal-form__input:focus+.modal-form__icon {
@@ -800,32 +801,26 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 16px;
   height: 16px;
   border: 1px solid var(--checkbox-color);
   border-radius: 2px;
-  color: transparent;
+  fill: transparent;
   background-color: var(--white-color);
-  pointer-events: none;
-  transition: border-radius var(--transition-props), border-color var(--transition-props), background-color var(--transition-props);
+  transition: border var(--transition-props), fill var(--transition-props), background-color var(--transition-props);
 }
 
-.modal-form__checkmark {
-  fill: currentColor;
-  opacity: 0;
-  transition: opacity var(--transition-props);
-}
-
-.modal-form__checkbox-hidden:checked+.modal-form__checkbox {
-  border-color: transparent;
+.modal-form__checkbox-hidden:checked+.modal-form__label--checkbox .modal-form__checkbox {
+  border: none;
+  fill: var(--light-color);
   background-color: var(--primary-brand-color);
 }
 
 .modal-form__checkbox-hidden:checked+.modal-form__checkbox .modal-form__checkmark {
-  opacity: 1;
+
 }
 
 .modal-form__policy-link {
