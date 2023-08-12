@@ -755,6 +755,7 @@ body {
   position: absolute;
   top: 50%;
   left: 16px;
+  fill: var(--dark-color);
   transform: translateY(-50%);
   pointer-events: none;
   transition: fill var(--transition-props);
@@ -799,7 +800,7 @@ body {
   margin-right: 8px;
   width: 16px;
   height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid var(--checkbox-color);
   border-radius: 2px;
   fill: transparent;
   background-color: var(--white-color);
