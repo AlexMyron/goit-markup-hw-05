@@ -677,15 +677,12 @@ body {
 }
 
 /* Modal Form */
-/* .modal-form {
-  padding: 72px 24px 24px;
-}
-
-*/ .modal__title {
+ .modal__title {
   margin-bottom: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: var(--dark-color);
   text-align: center;
 }
 
@@ -732,7 +729,7 @@ body {
   color: var(--dark-color);
   border-radius: 4px;
   border: 1px solid var(--checkbox-color);
-  outline: none;
+  outline: transparent;
   background-color: transparent;
   transition: border-color var(--transition-props);
 }
@@ -746,7 +743,8 @@ body {
   padding: 8px 16px;
   height: 120px;
   color: var(--checkbox-color);
-  outline: transparent
+  outline: transparent;
+    resize: none;
 }
 
 .modal-form__input:focus,
@@ -756,9 +754,9 @@ body {
 
 .modal-form__icon {
   position: absolute;
-  bottom: 50%;
+  top: 50%;
   left: 16px;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   pointer-events: none;
   transition: fill var(--transition-props);
 }
@@ -768,11 +766,9 @@ body {
 }
 
 .modal-form__button-submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   margin: 0 auto;
-  width: 170px;
+  min-width: 169px;
   height: 56px;
   font-weight: 500;
   line-height: 1.5;
