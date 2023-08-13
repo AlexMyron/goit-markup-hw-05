@@ -804,11 +804,11 @@ body {
   border-radius: 2px;
   fill: transparent;
   background-color: var(--white-color);
-  transition: border var(--transition-props), fill var(--transition-props), background-color var(--transition-props);
+  transition: border-color var(--transition-props), fill var(--transition-props), background-color var(--transition-props);
 }
 
 .modal-form__checkbox-hidden:checked+.modal-form__label--checkbox .modal-form__checkbox {
-  border: none;
+  border-color: var(--press-state-color);
   fill: var(--light-color);
   background-color: var(--press-state-color);
 }
